@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'ar-launcher',
+    loadChildren: () => import('./ar-launcher/ar-launcher.module').then( m => m.ArLauncherPageModule)
+  },
 ];
 
 @NgModule({
